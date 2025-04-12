@@ -5,4 +5,50 @@ VC++ 2010-2022
 DOMPDF
 WAMP SERVER  (dont install in C Drive )
 PHP
+BOOTSTRAP
 
+
+
+
+STEPS:
+
+install vc++ redist from 2010-2022 x86 version
+install wampserver
+extract bootstrap to D/wamp/www/PROJECT_FILE_NAME/bootstrap
+create new folders as assets, api, admin, inc, vendor inside /PROJECT_FILE_NAME
+create new folders as css, fonts, js, jquery, images
+open PROJECT_FILE_NAME in VSCODE 
+create config.ini in api folder 
+      enter the code in it:
+                    [database]
+                    host = localhost
+                    user = root
+                    password = 
+                    database = vvce
+                    port = 3306
+create db.php in api folder
+      enter code in it:
+                    <?php
+                    $config = parse_ini_file('config.ini');
+                    $link = mysqli_connect($config['host'], $config['user'], $config['password'], 
+                            $config['database'], $config['port']);
+                    if(!$link)
+                    {
+                        echo "CONNECTION FAILED".mysqli_error($link);
+                    }
+                    ?>
+create footer.php inside inc
+      enter code in it:
+                    </body>
+                    </html>
+create header.php inside inc
+      enter code in it:
+                    <!DOCTYPE html>
+                    <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>DOCUMENT</title>
+                        </head> 
+                        <body>
+download admin bootstrap 5 theme for free and extract it into admin folder
