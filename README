@@ -52,4 +52,20 @@ create header.php inside inc
                         </head> 
                         <body>
 download admin bootstrap 5 theme for free and extract it into admin folder
-create index.php inside admin enter code init
+create index.php inside admin enter code init from file text file index.php
+create index.php inside main folder enter code init
+                  <?php
+                      include './inc/header.php';
+                  ?>
+                  <?php
+                      include './api/db.php';
+                  ?>
+                  <?php
+                      include './inc/footer.php';
+                  ?>
+start wampserver through taskbar
+left click on icon and login to myPHPadmin
+create new database under utf8_general
+create table inside vvce db called invoice enter attributes 
+create table inside vvce db called client_details enter attributes
+create new inc inside admin folder and create header and footer. php files
